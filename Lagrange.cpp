@@ -14,7 +14,7 @@ Lagrange::Lagrange(const std::vector<double> &x, const std::vector<double> &y) {
 
 double Lagrange::l(double x, int k) const {
     double result = 1;
-    for (int i = 0; i <= this->x.size(); ++i) {
+    for (int i = 0; i < this->x.size(); ++i) {
         if (i == k) continue;
         result *= (x - this->x[i]) / (this->x[k] - this->x[i]);
     }
