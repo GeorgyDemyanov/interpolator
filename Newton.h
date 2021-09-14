@@ -11,8 +11,10 @@ class Newton {
 private:
     std::vector<double> x;
     std::vector<double> y;
+    std::vector<double> diff;
 
-    double difference(double k, int first, int last, std::vector<double> &diff);
+    double difference(double k, int first, int last);
+
 
 public:
     Newton(const std::vector<double> &x,
