@@ -18,8 +18,8 @@ void test(int n) {
     std::vector<double> y = generateData(10);
     std::sort(x.begin(), x.end());
     std::sort(y.begin(), y.end());
-    Lagrange lagrange(x, y);
-    Newton newton(x, y);
+    Lagrange<double> lagrange(x, y);
+    Newton<double> newton(x, y);
     for (int i = 0; i < n; i++) {
         double t = std::sin(rand()) * 0.5 * (x.back() - x[0]) + 0.5 * (x.back() + x[0]);
         double l = lagrange.interpolate(t);
